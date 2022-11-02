@@ -2288,8 +2288,20 @@ struct pmc_regs {
 	volatile uint8_t MBXCTRL;
 	/* 0x1a-0x1f: Reserved2 */
 	volatile uint8_t reserved2[6];
-	/* 0x20-0xff: Reserved3 */
-	volatile uint8_t reserved3[0xe0];
+	/* 0x20: Host Interface PM Channel 3 Status */
+	volatile uint8_t PM3STS;
+	/* 0x21: Host Interface PM Channel 3 Data Out Port */
+	volatile uint8_t PM3DO;
+	/* 0x22: Host Interface PM Channel 3 Data In Port */
+	volatile uint8_t PM3DI;
+	/* 0x23: Host Interface PM Channel 3 Control */
+	volatile uint8_t PM3CTL;
+	/* 0x24: Host Interface PM Channel 3 Interrupt Control */
+	volatile uint8_t PM3IC;
+	/* 0x25: Host Interface PM Channel 3 Interrupt Enable */
+	volatile uint8_t PM3IE;
+	/* 0x26-0xff: Reserved3 */
+	volatile uint8_t reserved3[0xda];
 };
 
 /* Input Buffer Full Interrupt Enable */
@@ -2307,6 +2319,9 @@ struct pmc_regs {
 #define PMC_PM2CTL_IBFIE    BIT(0)
 /* General Purpose Flag */
 #define PMC_PM2STS_GPF      BIT(2)
+
+/* PMC3 Input Buffer Full Interrupt Enable */
+#define PMC_PM3CTL_IBFIE    BIT(0)
 
 /*
  * Dedicated Interrupt

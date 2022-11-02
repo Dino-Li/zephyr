@@ -835,7 +835,8 @@
 				      IT8XXX2_IRQ_KBC_OBE IRQ_TYPE_LEVEL_HIGH
 				      IT8XXX2_IRQ_PMC1_IBF IRQ_TYPE_LEVEL_HIGH
 				      IT8XXX2_IRQ_PCH_P80 IRQ_TYPE_LEVEL_HIGH
-				      IT8XXX2_IRQ_PMC2_IBF IRQ_TYPE_LEVEL_HIGH>;
+				      IT8XXX2_IRQ_PMC2_IBF IRQ_TYPE_LEVEL_HIGH
+				      IT8XXX2_IRQ_PMC3_IBF IRQ_TYPE_LEVEL_HIGH>;
 			interrupt-parent = <&intc>;
 			#address-cells = <1>;
 			#size-cells = <1>;
