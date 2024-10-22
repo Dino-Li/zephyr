@@ -16,6 +16,11 @@
 
 #ifndef _ASMLANGUAGE
 
+struct ite_clk_cfg {
+	uint8_t ctrl;
+	uint8_t bits;
+};
+
 #ifdef CONFIG_HAS_ITE_INTC
 /*
  * Save current interrupt state of soc-level into ier_setting[] with
@@ -35,9 +40,7 @@ void ite_intc_init(void);
 bool ite_intc_no_irq(void);
 #endif /* CONFIG_HAS_ITE_INTC */
 
-#ifdef CONFIG_SOC_IT8XXX2_PLL_FLASH_48M
 void timer_5ms_one_shot(void);
-#endif
 
 uint32_t chip_get_pll_freq(void);
 void chip_pll_ctrl(enum chip_pll_mode mode);
