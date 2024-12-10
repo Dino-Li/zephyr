@@ -1,0 +1,12 @@
+identifier: it513xx_evb
+name: ITE IT51XXX EVB
+type: mcu
+arch: riscv
+toolchain:
+  - zephyr
+ram: 128
+supported:
+  - gpio
+  - pm
+  - uart
+vendor: ite

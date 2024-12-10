@@ -1,0 +1,6 @@
+board:
+  name: it513xx_evb
+  full_name: IT51XXX series
+  vendor: ite
+  socs:
+    - name: it51386cx
